@@ -11,7 +11,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  return arr.reduce((a,b) => {
+  return arr.reduce((a, b) => {
     return (b > a) ? b : a;
   }, 0);
 };
