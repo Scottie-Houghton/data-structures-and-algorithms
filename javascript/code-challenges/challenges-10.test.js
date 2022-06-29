@@ -26,8 +26,13 @@ For example:
 
 return: 23
 ------------------------------------------------------------------------------------------------ */
+
 const findMax = (matrix) => {
-  // Solution code here...
+  let highestNum = 0
+  matrix.forEach(arr => arr.forEach(number => {
+    if(number > highestNum) highestNum = number;
+  }));
+  return highestNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -100,7 +105,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let newArr = [];
+  data.forEach((cookies, idx) => {
+    newArr.push({
+      sales: `${cookies} cookies`,
+      time: hours[idx]
+    });
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
